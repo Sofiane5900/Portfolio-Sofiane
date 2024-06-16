@@ -74,3 +74,46 @@
       @apply bg-background text-foreground;
     }
   }
+
+  .glow {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow:
+      inset 0 0 20px #000,        /* inner black */
+      inset 10px 0 40px #000,     /* inner left black short */
+      inset -10px 0 40px #000,    /* inner right black short */
+      inset 10px 0 150px #000,    /* inner left black broad */
+      inset -10px 0 150px #000,   /* inner right black broad */
+      0 0 20px #fff,              /* outer white */
+      -5px 0 40px #fff,           /* outer left white */
+      5px 0 40px #fff;            /* outer right white */
+  
+    animation: glow-animation 2s infinite alternate;
+  }
+  
+  @keyframes glow-animation {
+    0% {
+      box-shadow:
+        inset 0 0 20px #000,
+        inset 10px 0 40px #000,
+        inset -10px 0 40px #000,
+        inset 10px 0 150px #000,
+        inset -10px 0 150px #000,
+        0 0 20px #fff,
+        -5px 0 40px #fff,
+        5px 0 40px #fff;
+    }
+    100% {
+      box-shadow:
+        inset 0 0 20px #000,
+        inset 10px 0 50px #000,
+        inset -10px 0 50px #000,
+        inset 10px 0 200px #000,
+        inset -10px 0 200px #000,
+        0 0 20px #fff,
+        -5px 0 50px #fff,
+        5px 0 50px #fff;
+    }
+  }
+  
