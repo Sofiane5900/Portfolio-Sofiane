@@ -5,10 +5,6 @@ import { HoverEffect } from '@/components/ui/cards-hover'
 import { SiHtml5, SiCss3, SiJavascript, SiReact, SiMongodb} from 'react-icons/si'
 import { FaSass } from "react-icons/fa";
 
-
-
-
-
 export default function Skills() {
 
     const skills = [
@@ -42,10 +38,11 @@ export default function Skills() {
             Icon: FaSass
         }
     ]
+    
   return (
     <div className='container mx-auto max-w-5xl px-8'>
         <div>
-            <Title text='Skills' className='text-white flex flex-col items-center'></Title>
+            <Title text='Skills' className='text-white flex flex-col items-center py-10 text-3xl font-bold underline underline-offset-8'></Title>
 
             <HoverEffect items={skills}/>;
             
